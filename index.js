@@ -7,6 +7,11 @@ app.use(express.json());
 
 app.use("/api/users", userRouter);
 
+app.get ('/', (req, res) => {
+    res.json({
+        message : 'JWT token'
+    })
+});
 
 app.listen(port, () => {
   console.log("Port is listing :", port);
